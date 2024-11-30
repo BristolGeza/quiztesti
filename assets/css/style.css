@@ -1,0 +1,355 @@
+/*Import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nova+Square&family=Space+Grotesk:wght@300..700&family=Zen+Dots&display=swap');
+
+/* some colours - CSS HEX */
+:root{
+    --pumpkin: #ff6d00ff;
+    --safety-orange: #ff7900ff;
+    --ut-orange: #ff8500ff;
+    --princeton-orange: #ff9100ff;
+    --orange-peel: #ff9e00ff;
+    --russian-violet: #240046ff;
+    --persian-indigo: #3c096cff;
+    --tekhelet: #5a189aff;
+    --french-violet: #7b2cbfff;
+    --amethyst: #9d4eddff;
+    background-color: #111211;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+        font-family: 'Space Grotesk', cursive;
+    }
+    
+    h1 {
+        font-size: 5.4rem;
+        color: #fff;
+    }
+    
+    h2 {
+        font-size: 4.2rem;
+        color: #fff;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .rule-list {
+        font-size: 4rem;
+        color: #fff;
+        margin-bottom: 4rem;
+    }
+
+
+    #home {
+        width: 100%;
+    }
+
+/*need to make a media query for this*/
+    .hero-img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin: auto 0;
+        background: url(../images/outer-space.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+        border-radius: 35px;
+    }
+
+    .quiz-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7.8rem;
+        color: #fff;
+        font-weight: 1000;
+    }
+
+    .quiz-sub {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-style: italic;
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 200;
+    }
+
+    .glow::before, 
+    .glow::after {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        background: linear-gradient(
+            -45deg, #00ff66, #00ffff, #ff00ff, #ff0099, #099fff
+        );
+        background-size: 400%;
+        height: calc(100% + 5px);
+        width: calc(100% + 5px);
+        z-index: -1;
+        animation: change 40s linear infinite;
+        border-radius: 35px;
+
+    }
+
+    @keyframes change {
+        0%{
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+        
+    }
+
+    .glow::after{
+        filter:blur(40px);
+        opacity: .5 ;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 0 100px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .flex-column {
+        display: flex; 
+        flex-direction: column;
+    }
+    
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .justify-center {
+        justify-content: center;
+    }
+    
+    .text-center{
+        text-align: center;
+    }
+
+       /*Button styling*/
+       .btn {
+        font-size: 2.4rem;
+        padding: 2rem 0;
+        width: 33rem; /* made this slightly bigger to fit emoji */
+        text-align: center;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: rgb(29, 26, 26);
+        background: linear-gradient(var(--amethyst) 0%, var(--french-violet) 100%);
+        border-radius: 20px;
+        margin: 10px 10px;
+        justify-self: center;
+    }
+    
+    .btn:hover{
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 var(--amethyst);
+        transition: transform 150ms; 
+        transform: scale(1.03);
+    }
+    
+    .btn[disabled]:hover {
+        cursor: not-allowed;
+        box-shadow: none; 
+        transform: none; 
+    }
+
+    .highscore-btn{
+
+    }
+
+    .rules-btn{
+        margin-bottom: 4rem ;
+    }
+
+    /*Style font awesome icons*/
+
+    .fa-rocket {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .fa-atom {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+    
+    .fa-book {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .fa-rotate-right {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .fa-globe {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .fa-bars {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .fa-solid {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+/*Responsive Design */
+/* buttons inline for BIG desktops */
+
+@media (min-width: 1750px) {
+    .btn-container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1749px) {
+    .btn-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 700px;
+    }
+    .btn {
+        flex: 0 0 auto;
+    }
+}
+
+/* middling widths to sort out janky-ness */ 
+
+@media (max-width: 1700px) {
+    .quiz-title {
+        font-size: 6rem;
+        white-space: nowrap;
+        margin-bottom: 10px
+
+    }
+
+    .quiz-sub {
+        font-size: 4.5rem; /* to be smaller than the heading for consistency's sake */
+        margin-top: 30px;
+        white-space: nowrap;
+    }
+
+}
+
+/* small laptops */ 
+
+@media (max-width: 1200px) {
+    .quiz-title {
+        font-size: 6rem;
+        white-space: nowrap;
+        margin-bottom: 10px
+
+    }
+
+    .quiz-sub {
+        font-size: 4.5rem; /* to be smaller than the heading for consistency's sake */
+        margin-top: 30px;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width: 992px) {
+   /* need to ammend so its less 'wobbily' and fixed without breaking */
+   
+    .quiz-title {
+        font-size: 5.5rem;
+        white-space: nowrap;
+
+    }
+
+    .quiz-sub {
+        font-size: 4rem; /* to be smaller than the heading for consistency's sake */
+        margin-top: 20px;
+        white-space: nowrap;
+    }
+
+    .container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quiz-title {
+        font-size: 4.5rem;
+        white-space: nowrap;
+
+    }
+
+    .quiz-sub {
+        font-size: 3.5rem; /* to be smaller than the heading for consistency's sake */
+        margin-top: 30px;
+        white-space: nowrap;
+    }
+
+    .hero-img {
+        max-height: 300px;
+    
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+
+/* MOBILE !! */ 
+@media (max-width: 576px) {
+    .quiz-title {
+        font-size: 3rem; /* i think max in case of small smart phone i.e. approx 375px */ 
+        white-space: nowrap;
+
+    }
+
+    .quiz-sub {
+        font-size: 2.5rem; /* to be smaller than the heading for consistency's sake */
+        margin-top: 30px;
+    }
+
+    .hero-img {
+        max-height: 300px;
+    
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
