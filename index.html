@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Science Quiz Game. Good luck, and have fun playing the game!">
+    <meta name="keywords" content="Science, Quiz, Game, Trivia, Knowledge, Education, Learning, Fun, Challenge, Physics, Chemistry, Biology, Questions, Answers, Interactive, Competition, Students, Classroom, Test, Facts">
+    <meta name="author" content="Group Project">
     <title>Fission for Answers</title>
+    <link rel="icon" type="image/png" href="assets/images/fishing.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Font Awesome Link-->
     <script src="https://kit.fontawesome.com/184d6d4d42.js" crossorigin="anonymous"></script>
@@ -12,14 +16,11 @@
 <body>
     <div class="container">
         <div id="home" class="flex-column flex-center">
-<!--Title
-            <h1 class = "quiz-title">Fission for Answers</h1>
--->
 <!--image in hero-->
                 
                 <div class = "hero-img glow">
-                <!--<img class src="assets/images/outer-space.jpg" alt="">-->
-                    <div class = "quiz-title">Fission for Answers!</div>
+                <!--<img class src="assets/images/outer-space.jpg" alt="" aria-label="Hero section of space background with game title and subtitle. A changing neon style gradient around the boarder">-->
+                    <div class = "quiz-title"><h1>Fission for Answers!</h1></div>
                 
                     <div class = "quiz-sub">Science Quiz Game</div>
                 </div>
@@ -27,18 +28,18 @@
                 <!-- container to allow css for media query -->
             <div class="btn-container">
 <!--Play button-->
-            <a href="game.html" class="btn">Quick Start Adventure!
+            <a href="game.html" class="btn" aria-label="Click to quick start your quiz with a random mixture of suject questions.">Quick Start Adventure!
                 <i class="fa-solid fa-rocket"></i>
             </a>
 <!--Choose a category-->            
-            <a href="categories.html" class="btn">Choose a Category!
+            <a href="categories.html" class="btn" aria-label="Choose a subject category to play">Choose a Category!
                 <i class="fa-solid fa-bars"></i>
             </a>
 <!--Leaderboards Button-->
-            <a href="highscores.html" id="highscore-btn" class="btn">Highscores
+            <a href="highscores.html" id="highscore-btn" class="btn" aria-label="View the game highscores">Highscores
                     <i class="fa-solid fa-atom"></i> 
             </a>
-            <a href="rules.html" id="rules-btn" class="btn">Rules
+            <a href="rules.html" id="rules-btn" class="btn" aria-label="View the game rules">Rules
                 <i class="fa-solid fa-book"></i> 
             </a>     
         </div>
@@ -49,7 +50,7 @@
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <ul id="social-networks">
             <li id="facebook"><a href="http://www.facebook.com/" target="_blank" rel="nonopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
             </li>
@@ -60,6 +61,11 @@
             <li id="X"><a href="https://x.com/?lang=en" target="_blank" rel="nonopener" aria-label="Visit our X (twitter) page (opens in a new tab)"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
         </ul>
+
+        <div class="footer-center"> 
+            <p>&copy; 2024 Fission4Answers. All rights reserved.</p> 
+            <a href="mailto:info@fissionforanswers.com" id="contact-us">Contact Us <i class="fa-solid fa-envelope"></i></a> 
+         </div>
     </footer>
     
 </body>

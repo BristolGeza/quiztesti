@@ -564,3 +564,22 @@ incrementScore = num => {
 }
 
 startGame()
+
+/* Jess' attempt at adding keyboard scrolling */ 
+
+document.querySelector('.choice-container-container').addEventListener('keydown', function(e) {
+    const scrollAmount = 10;
+    if (e.key === 'ArrowDown') {
+        this.scrollTop += scrollAmount;
+    }
+    if (e.key === 'ArrowUp') {
+        this.scrollTop -= scrollAmount;
+    }
+    if (e.key === 'ArrowRight') {
+        this.scrollLeft += scrollAmount;
+    }
+    if (e.key === 'ArrowLeft') {
+        this.scrollLeft -= scrollAmount;
+    }
+});
+

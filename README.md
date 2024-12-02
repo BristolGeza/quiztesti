@@ -28,28 +28,32 @@
 
 # Fission-for-Answers
 
-## Table of Contents
-- [Project Overview](#project-overview) 
-- [Features](#features) 
+![Deployed Site on Devices](/assets/images/readme/home-ux.png)
+
+# Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
 - [Design](#design)
 - [UX](#ux)
-- [Installation](#installation) 
-- [Usage](#usage) 
-- [Testing and Validation](#testing-and-validation) 
-- [Deployment](#deployment) 
-- [Documentation](#documentation) 
-- [Code Organization] 
-- [JavaScript Functionality]
+- [Planning](#planning)
+- [Documentation](#documentation)
+- [Validation and Testing](#validation-and-testing)
+- [Installation and Prerequisites for Running](#installation-and-prerequisites-for-running)
+- [Usage](#usage)
 - [AI Tools](#ai-tools)
-- [Screenshots] 
-- [Contributions]
-- [License] 
-- [Contact]
-- [Acknowledgements] 
+- [General Project Reflections](#general-project-reflections)
+- [Contribution](#contribution)
+- [License](#license)
+- [Creators and Contact](#creators-and-contact)
+- [Credits and Acknowledgements](#credits-and-acknowledgements)
+
 
 # Project Overview
 
-**Fission 4 Answers** is an interactive sciece quiz game, intended for players of varying knowledge with adjustable difficulties. We have provided a high score cache for players to compete with themselves or each other.
+**Fission 4 Answers** is an interactive science quiz game, intended as general knowledge, with a mixture of question difficulty. We have provided 4 game modes for players. All questions, Chemistry, Physics or Biology. 
+
+View the [Deployed Site](https://rowan01g.github.io/Fission-for-Answers/)
 
 ### Project Goal
 The overall project goal was to create an interactive quiz website using HTML, CSS and JavaScript. While utlising tools such as AI, to enhance design and debugging, inline with the [marking crtieria](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSBC_H1AI+1/courseware/8765212c3d0c4f9ca95ce2e6de9ae626/5a0e79ed85344b13887067937f5d27b6/).
@@ -60,30 +64,49 @@ And here are the specifics
 # Features
 
 ## Existing Features 
-- Interactive quizzes with immediate feedback. 
-- 2 difficulty levels (easy and hard). 
-- Progress tracking and scoring. 
-- Responsive design for multiple devices. - Accessibility features - incl: 
+- Interactive quiz, with immediate correct/incorrect feedback.
+- Progress tracking during game play. 
+- Responsive design for multiple devices. 
+- A choice of subjects - physics, chemistry and biology.
+
+- Accessibility features - incl: 
 
 ## Future features
-- Medium difficulty levels. 
-- Subject specific levels.
-- "Hint" feature - perhaps an image toggle.
+- A choice of difficulty levels. 
+- "Hint" feature - *perhaps an image toggle to see the hint.*
+- A "start over" button during gameplay. 
+- Ability to store users score, additionally, to share a players score with friends/to social media to challenge others. 
+- Bonus points for speed of answers and/or a countdown timer, to give users an allotted amount of time for each answer.
+- More questions from an external database. 
+- A 'light mode' toggle, with accessible colours for players who may be visually impaired.
+
+## Bugs:
+Due to time contraints in this project, the deployed site matched the MVP. However, there were some minor bugs which should be ammended with an update. 
+- The colour contrast between the chosen purple and dark grey do not meet accessibility requirements. 
+- Further labels, and more HTML semantics to make the webpage more accessible. 
+- Directional elements e.g., forward and backward buttons on the answers etc. 
 
 # Design 
 
-
 ### Colour scheme 
+
+We chose a dark background colour scheme to align with the space theme of the hero image, icons and buttons. Specifically these were:
+![base colour scheme used on Quiz](/assets/images/readme/base-colours.png)
+
 The following colours were used to create a changing gradient glow effect on the hero image. 
 ![gradient colour scheme and hex values](/assets/images/readme/glow-colours.png)
 
 
 ## UX
 
+![Deployed Site on Devices](/assets/images/readme/other-ux.png)
+
+
 ## Planning
 
 ### User Stories 
 
+User stories were generated with the assistance of AI (namely, Copilot). Prompts were ammended and answers fine tuned to meet the project criteria in view of time contraints. 
 <div class="speech-bubble">
   <p><strong>User Story:</strong> As a player, I want to see a countdown timer for each question, so that I feel challenged to answer quickly and accurately.</p>
   <p><strong>Acceptance Criteria:</strong></p>
@@ -272,7 +295,18 @@ The following colours were used to create a changing gradient glow effect on the
   </ol>
 </div>
 
+### Project Board 
 
+User stories were turned into 'Issues' on a project board, allowing syncronous group work and clear allocation of tasks which assisted in iliciting minimal merge conflicts. 
+
+![fission for answers group project board](/assets/images/readme/project-board.png)
+
+#### Group Working 
+
+We had frequent check ins, and worked in serperate branches. We also focused on different areas of the project. 
+We compared and ensured no merge conflicts between our branch and the main before pushing changes. 
+
+![merge example](/assets/images/readme/merge-example.png)
 
 
 
@@ -288,21 +322,44 @@ The code in this project was organised into defined sections (including seperate
 
 The website is intented to be accessible to all (within reason). Therefore validation and testing of both the code and final project design was completed to ensure best practise of accessibility and user experience.
 
+### Accessibility
+
+**Wave:** 
+Showed no errors through all pages of the website. [index HTML Google Lighthouse](/assets/images/readme/wave-accessibility.png)
+
+#### Home Page 
+**Google Lighthouse:**
+Passed ![index HTML Google Lighthouse](/assets/images/readme/index-accessibility.png)
+**Accessible Web Helper:** ![index HTML](/assets/images/readme/accessibility-extension.png)
+
+#### Rules Page
+**Google Lighthouse:** Passed ![Rules Acessibility Google Lighthouse](/assets/images/readme/rules-accessibility.png)
+
+#### Game Page 
+**Google Lighthouse:** ![Game page google lighthouse](/assets/images/readme/game-lighthouse.png)
+
 #### HTML:
 
-W3C:
+W3C: Passed ![index HTML validation](/assets/images/readme/html-validation.png)
 
 #### CSS:
-W3C:
+W3C: Passed ![index CSS validation](/assets/images/readme/css-validation.png)
 
 #### JavaScript: 
 
 ### Design:
 
 #### Colour contrast:
+Unfortunately this failed. 
+![contrast result](/assets/images/readme/contrast.png)
+<br>
+However, the contrast on Wave accessibility did not show this error. 
 
-#### Font: 
+#### Fonts: 
 
+**Headings:** the font family Bellota+Text was used for the headings and text questions.
+
+**Subheading:** the font family 'Space Grotesk' in cursive was selected to show emphasis and contrast against the title. The same font was used for the heading on the Game page to give consistency and show progress through the site for the user. 
 
 # Insallation and Prerequisites for running
 
@@ -328,7 +385,11 @@ The use of AI has allowed this project to be created in a more timely manner. AI
 <br>
 In **code optimisation**, AI was able to suggest areas in which the code could be made shorter/more effective, and suggest alternative work-arounds for design. This was most appropriate in the CSS and HTML of the wesbite, as JavaScript information tended to be less reliable, although a useful tool nonetheless. 
 <br>
-Finally, AI was a useful tool in the intial planning stage, such as in the generation and optimisation of the [User Stories](#user-stories). AI was also used to suggest initial **code generation**, to give an idea of where to start - although this was not used in the final project. 
+Finally, AI was a useful tool in the intial planning stage, such as in the generation and optimisation of the [User Stories](#user-stories). AI was also used to suggest initial **code generation**, to give an idea of where to start - although this was not used in the final project.
+
+# General Project Reflections
+
+
 
 # Contribution 
 
@@ -338,17 +399,19 @@ Please see [this documentation](https://docs.github.com/en/pull-requests/collabo
 
 # License
 
-?? Unsure of what actually goes in here, but resources online all seem to include this section.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 # Creators and Contact 
 
 Rowan 
-[GitHub:]
-[Email:] (mailto:)
+[GitHub:](https://github.com/rowan01g)
+[Email:](mailto:) <!--- rowan if u want to add this pls do >
 
 Geza 
-[GitHub:]
-[Email:] (mailto:)
+<br>
+[GitHub](https://github.com/BristolGeza)
+<br>
+[Email](mailto:geza.csosz@gmail.com)
 
 Jess 
 <br>
@@ -365,6 +428,11 @@ Jess
 - Bootstrap. 
 - Copilot.
 
+#### Design:
+
+Favicon: 
+<a href="https://www.flaticon.com/free-icons/fishing-baits" title="fishing-baits icons">Fishing-baits icons created by Bima Pamungkas - Flaticon</a>
+
 #### Languages:
 - CSS
 - HTML5 
@@ -376,9 +444,8 @@ Jess
 [JavaScript Validator] ()
 
 #### Accessibility Software:
-- Colour contrast [WCAG] (https://accessibleweb.com/color-contrast-checker/)
-- [Google Lighthouse] (https://developer.chrome.com/docs/lighthouse)
-
+- Colour contrast [WCAG](https://accessibleweb.com/color-contrast-checker/)
+- [Google Lighthouse](https://developer.chrome.com/docs/lighthouse)
 
 #### Misc resources accessed:
-- 
+
